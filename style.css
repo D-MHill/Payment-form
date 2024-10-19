@@ -1,0 +1,89 @@
+body {
+	font-size: 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+}
+
+.form-box {
+	display: flex;
+	align-items: center;
+}
+
+form {
+	background-color: white;
+	padding: 25px;
+	border-radius: 10px;
+	border: 2px solid #3c3c3b;
+	max-width: 400px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+label {
+	color: #3c3c3b;
+	font-weight: bold;
+	flex-basis: 20%;
+}
+
+.card-data {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+#expireMM,
+#expireYY,
+#cvv {
+	padding: 10px;
+	max-height: 35px;
+}
+
+.error {
+	color: #e70064;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="number"] {
+	padding: 10px;
+	width: 100%;
+	border: 1px solid #3c3c3b;
+	box-sizing: border-box;
+	flex-basis: 80%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+input[type="text"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="email"]::placeholder,
+input[type="number"]::placeholder {
+	color: #999999;
+	font-style: italic;
+}
+
+#submit {
+	background-color: #6495ED;
+	width: 25%;
+	color: white;
+	padding: 8px;
+	border: 1px solid #3c3c3b;
+	border-radius: 5px;
+
+	cursor: pointer;
+	display: block;
+	margin: 10px auto;
+}
+
+.input-box.valid input {
+	background-color: #a6e44e;
+}
+
+.input-box.invalid input {
+	background-color: #f193da;
+}

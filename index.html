@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Payment</title>
+		<link rel="stylesheet" href="style.css" />
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "r0UDHrhpdpSBhyeh4",
+      });
+   })();
+</script>
+	</head>
+	<body>
+		<div class="container">
+			<form id="form">
+<div class="input-box">
+					<label for="name">Name:</label>
+					<input
+						id="name"
+						type="text"
+						placeholder="Enter your full name"
+						required />
+					<div class="error"></div>
+				</div>				
+				<div class="input-box">
+					<label for="email">Email:</label>
+					<input
+						id="email"
+						type="text"
+						placeholder="Enter your Email"
+						required />
+					<div class="error"></div>
+				</div>
+				<div class="input-box">
+					<label for="card">Card Number:</label>
+					<input
+						id="card"
+						type="tel"
+						inputmode="numeric"
+						pattern="[0-9\s]{13,19}"
+						maxlength="19"
+						placeholder="xxxx xxxx xxxx xxxx"
+						required />
+					<div class="error"></div>
+				</div>
+				<div class="input-box">
+					<label for="holder">Card Holder:</label>
+					<input
+						id="holder"
+						type="text"
+						placeholder="Enter name on the card"
+						required />
+					<div class="error"></div>
+				</div>
+				
+				<div class="card-data">
+					<label>Expiration date:</label>
+					<select id="expireMM">
+						<option value="01">January</option>
+						<option value="02">February</option>
+						<option value="03">March</option>
+						<option value="04">April</option>
+						<option value="05">May</option>
+						<option value="06">June</option>
+						<option value="07">July</option>
+						<option value="08">August</option>
+						<option value="09">September</option>
+						<option value="10">October</option>
+						<option value="11">November</option>
+						<option value="12">December</option>
+					</select>
+					<select id="expireYY">
+						<option value="24">2024</option>
+						<option value="25">2025</option>
+						<option value="26">2026</option>
+						<option value="27">2027</option>
+						<option value="28">2028</option>
+						<option value="29">2029</option>
+					</select>
+					<div class="error"></div>
+					<label>Security Code:</label>
+					<input type="number" id="cvv" required />
+					<div class="error"></div>
+				</div>
+
+				<button type="submit" id="submit" onClick="sendEmail()">Submit</button>
+			</form>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
